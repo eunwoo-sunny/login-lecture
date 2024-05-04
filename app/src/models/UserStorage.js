@@ -17,6 +17,17 @@ class UserStorage {
         }, {})
         return newUsers;
     }
+
+    static getUserInfo(id) {
+        const users = this.#users;
+        const idx = users.id.indexOf(id);
+        const usersKeys = Object.keys(users); // users의 키값들만 가져와서 배열로 만든다. [id,pw,name]
+        const userInfo = usersKeys.reduce( (newUser, info) => {
+            newUser[info] = users[info][idx];
+            return newUser
+        }, {})
+        return userInfo;
+    }
 }
 
 module.exports = UserStorage;
