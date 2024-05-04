@@ -12,8 +12,8 @@ function login() {
         pw : pw.value
     }
     
-    console.log('req :', req)
-    console.log('JSON.req : ', JSON.stringify(req))
+    // console.log('req :', req)
+    // console.log('JSON.req : ', JSON.stringify(req))
     fetch('/login', {
         method :'POST', // 전달방식은 post 이다.
         headers : {
@@ -21,4 +21,6 @@ function login() {
         },
         body : JSON.stringify(req)
     })
+    .then( (res) => res.json())
+    .then(res => console.log(res))
 }
