@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/js/home/login.js" defer></script>
+    <script src="/js/home/register.js" defer></script>
     <link rel="stylesheet" href="/css/login.css">          
 </head>
 <body>
@@ -14,13 +14,14 @@
 
     <div class="login-page">
         <div class="form">
-         
-          <form class="login-form">
-            <input type="text" id="id" placeholder="아이디"/>
-            <input type="password" id="pw" placeholder="비밀번호"/>
-            <button id="btnLogin">login</button>
-            <p class="message">Not registered? <a href="/register">Create an account</a></p>
-          </form>
+          <form class="register-form">
+            <input type="text" id="id" placeholder="id"/>
+            <input type="text" id="name" placeholder="name"/>
+            <input type="password" id="pw" placeholder="password"/>
+            <input type="password" id="confirm-pw" placeholder="confirm password"/> 
+            <button type="button" id="regiBtn">SIGN UP</button>
+            <p class="message">Already registered? <a href="/login">Sign In</a></p>
+          </form> 
         </div>
       </div>
       <!-- Copyright (c) 2024 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy) -->
